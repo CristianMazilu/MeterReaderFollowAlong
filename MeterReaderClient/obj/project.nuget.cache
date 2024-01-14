@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SK0O2G0AND9I8J7Ka+6RBGCR1TiBNWnX75DQV04iPMBcV/8VXTStPlVlvQyjsaW69RzqD0v3JD11OO8Mdj657A==",
+  "dgSpecHash": "SYpi3gcbF7/zp9wDJHbDrbG1hGxLSZ4+K/gOHElbOwbb2zzUL4s2K6BiSyrsGS8M9Zlh4AMN5dIaE/rxMm5jFw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderClient\\MeterReaderClient.csproj",
+  "projectFilePath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderClient\\MeterReaderClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mazil\\.nuget\\packages\\google.protobuf\\3.21.5\\google.protobuf.3.21.5.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\grpc.core.api\\2.49.0\\grpc.core.api.2.49.0.nupkg.sha512",

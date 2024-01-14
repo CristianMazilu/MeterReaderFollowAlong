@@ -1,5 +1,5 @@
 is_global = true
 build_property.RootNamespace = MeterReaderLib
-build_property.ProjectDir = D:\Projects\2024.01.06 gRPC Course\meterreader\src\MeterReader\MeterReaderLib\
+build_property.ProjectDir = D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderLib\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -6440,11 +6440,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderWeb\\MeterReaderWeb.csproj",
+      "projectUniqueName": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderWeb\\MeterReaderWeb.csproj",
       "projectName": "MeterReaderWeb",
-      "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderWeb\\MeterReaderWeb.csproj",
+      "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderWeb\\MeterReaderWeb.csproj",
       "packagesPath": "C:\\Users\\mazil\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderWeb\\obj\\",
+      "outputPath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mazil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6461,8 +6461,8 @@
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {
-              "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj"
+            "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {
+              "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj"
             }
           }
         }

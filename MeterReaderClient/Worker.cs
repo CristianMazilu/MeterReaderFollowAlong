@@ -3,6 +3,8 @@ using MeterReaderWeb.Services;
 using MeterReaderWeb.Services;
 using Grpc.Net.Client;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
+using Microsoft.Extensions.Logging;
 
 namespace MeterReaderClient
 {
@@ -11,13 +13,18 @@ namespace MeterReaderClient
         private readonly ILogger<Worker> _logger;
         private readonly IConfiguration _config;
         private readonly ReadingFactory factory;
+        private readonly ILoggerFactory loggerFactory;
         private MeterReadingService.MeterReadingServiceClient _client = null;
 
-        public Worker(ILogger<Worker> logger, IConfiguration config, ReadingFactory factory)
+        public Worker(ILogger<Worker> logger,
+                    IConfiguration config,
+                    ReadingFactory factory,
+                    ILoggerFactory loggerFactory)
         {
             _logger = logger;
             this._config = config;
             this.factory = factory;
+            this.loggerFactory = loggerFactory;
         }
 
         protected MeterReadingService.MeterReadingServiceClient Client
@@ -26,7 +33,12 @@ namespace MeterReaderClient
             {
                 if (_client == null)
                 {
-                    var channel = GrpcChannel.ForAddress(_config["Service:ServerUrl"]);
+                    var opt = new GrpcChannelOptions()
+                    {
+                        LoggerFactory = loggerFactory,
+                    };
+
+                    var channel = GrpcChannel.ForAddress(_config["Service:ServerUrl"], opt);
                     _client = new MeterReadingService.MeterReadingServiceClient(channel);
                 }
 
@@ -72,15 +84,28 @@ namespace MeterReaderClient
                     pkt.Readings.Add(await factory.Generate(customerId));
                 }
 
-                var result = await Client.AddReadingAsync(pkt);
-                if (result.Success == ReadingStatus.Success)
+                try
                 {
-                    _logger.LogInformation("Successfully sent");
+                    var result = await Client.AddReadingAsync(pkt);
+                    if (result.Success == ReadingStatus.Success)
+                    {
+                        _logger.LogInformation("Successfully sent");
+                    }
+                    else
+                    {
+                        _logger.LogInformation("Failed to send");
+                    }
                 }
-                else
+                catch (RpcException ex)
                 {
-                    _logger.LogInformation("Failed to send");
+                    if (ex.StatusCode == StatusCode.OutOfRange)
+                    {
+                        _logger.LogError($"{ex.Trailers.Aggregate(string.Empty, (result, f) => result + $"Key: {f.Key}, Value: {f.Value}\n")}");
+                    }
+                    _logger.LogError($"Exception thrown{ex}");
                 }
+
+                
 
                 await Task.Delay(_config.GetValue<int>("Service:DelayInterval"), stoppingToken);
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {}
+    "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {
+    "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj",
+        "projectUniqueName": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj",
         "projectName": "MeterReaderLib",
-        "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj",
+        "projectPath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\MeterReaderLib.csproj",
         "packagesPath": "C:\\Users\\mazil\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\2024.01.06 gRPC Course\\meterreader\\src\\MeterReader\\MeterReaderLib\\obj\\",
+        "outputPath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mazil\\AppData\\Roaming\\NuGet\\NuGet.Config",

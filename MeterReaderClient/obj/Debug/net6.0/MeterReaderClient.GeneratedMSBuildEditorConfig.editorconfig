@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MeterReaderClient
-build_property.ProjectDir = D:\Projects\2024.01.06 gRPC Course\meterreader\src\MeterReader\MeterReaderClient\
+build_property.ProjectDir = D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderClient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
