@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = MeterReaderWeb
+build_property.ProjectDir = D:\Projects\2024.01.06 gRPC Course\meterreader\src\MeterReader\MeterReaderWeb\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
