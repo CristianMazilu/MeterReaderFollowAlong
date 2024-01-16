@@ -1,23 +1,58 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using MeterReaderLib;
+using MeterReaderLib.Models;
 using MeterReaderWeb.Data;
 using MeterReaderWeb.Data.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
 namespace MeterReaderWeb.Services
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class MeterService : MeterReadingService.MeterReadingServiceBase
     {
         private readonly ILogger<MeterService> _logger;
         private readonly IReadingRepository _repository;
+        private readonly JwtTokenValidationService tokenService;
 
         public MeterService(ILogger<MeterService> logger,
-                            IReadingRepository repository)
+                            IReadingRepository repository,
+                            JwtTokenValidationService tokenService)
         {
             this._logger = logger;
             this._repository = repository;
+            this.tokenService = tokenService;
+        }
+
+        [AllowAnonymous]
+        public override async Task<TokenResponse> CreateToken(TokenRequest request, ServerCallContext context)
+        {
+            var creds = new CredentialModel()
+            {
+                UserName = request.Username,
+                Passcode = request.Password
+            };
+
+            var response = await tokenService.GenerateTokenModelAsync(creds);
+
+            if (response.Success)
+            {
+                return new TokenResponse
+                {
+                    Token = response.Token,
+                    Expiration = Timestamp.FromDateTime(response.Expiration),
+                    Success = true
+                };
+            }
+
+            return new TokenResponse
+            {
+                Success = false
+            };
         }
 
         public override async Task<Empty> SendDiagnostics(IAsyncStreamReader<ReadingMessage> requestStream,

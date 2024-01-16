@@ -26,21 +26,28 @@ namespace MeterReaderWeb.Services {
           string.Concat(
             "ChFNZXRlclJlYWRlci5wcm90bxoLZW51bXMucHJvdG8aH2dvb2dsZS9wcm90",
             "b2J1Zi90aW1lc3RhbXAucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5w",
-            "cm90byJlCg1SZWFkaW5nUGFja2V0EiEKCHJlYWRpbmdzGAEgAygLMg8uUmVh",
-            "ZGluZ01lc3NhZ2USDQoFbm90ZXMYAiABKAkSIgoKc3VjY2Vzc2Z1bBgDIAEo",
-            "DjIOLlJlYWRpbmdTdGF0dXMigwEKDlJlYWRpbmdNZXNzYWdlEhIKCmN1c3Rv",
-            "bWVySWQYASABKAUSFAoMcmVhZGluZ1ZhbHVlGAIgASgFEi8KC3JlYWRpbmdU",
-            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEoECAMQBEoE",
-            "CAQQBVIKc3VjY2Vzc2Z1bCJBCg1TdGF0dXNNZXNzYWdlEg8KB21lc3NhZ2UY",
-            "ASABKAkSHwoHc3VjY2VzcxgCIAEoDjIOLlJlYWRpbmdTdGF0dXMyuQEKE01l",
-            "dGVyUmVhZGluZ1NlcnZpY2USLAoKQWRkUmVhZGluZxIOLlJlYWRpbmdQYWNr",
-            "ZXQaDi5TdGF0dXNNZXNzYWdlEjYKBFRlc3QSFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSPAoPU2VuZERpYWdub3N0",
-            "aWNzEg8uUmVhZGluZ01lc3NhZ2UaFi5nb29nbGUucHJvdG9idWYuRW1wdHko",
-            "AUIaqgIXTWV0ZXJSZWFkZXJXZWIuU2VydmljZXNiBnByb3RvMw=="));
+            "cm90byIyCgxUb2tlblJlcXVlc3QSEAoIdXNlcm5hbWUYASABKAkSEAoIcGFz",
+            "c3dvcmQYAiABKAkiXwoNVG9rZW5SZXNwb25zZRINCgV0b2tlbhgBIAEoCRIu",
+            "CgpleHBpcmF0aW9uGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIPCgdzdWNjZXNzGAMgASgIImUKDVJlYWRpbmdQYWNrZXQSIQoIcmVhZGlu",
+            "Z3MYASADKAsyDy5SZWFkaW5nTWVzc2FnZRINCgVub3RlcxgCIAEoCRIiCgpz",
+            "dWNjZXNzZnVsGAMgASgOMg4uUmVhZGluZ1N0YXR1cyKDAQoOUmVhZGluZ01l",
+            "c3NhZ2USEgoKY3VzdG9tZXJJZBgBIAEoBRIUCgxyZWFkaW5nVmFsdWUYAiAB",
+            "KAUSLwoLcmVhZGluZ1RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wSgQIAxAESgQIBBAFUgpzdWNjZXNzZnVsIkEKDVN0YXR1c01lc3Nh",
+            "Z2USDwoHbWVzc2FnZRgBIAEoCRIfCgdzdWNjZXNzGAIgASgOMg4uUmVhZGlu",
+            "Z1N0YXR1czLnAQoTTWV0ZXJSZWFkaW5nU2VydmljZRIsCgpBZGRSZWFkaW5n",
+            "Eg4uUmVhZGluZ1BhY2tldBoOLlN0YXR1c01lc3NhZ2USNgoEVGVzdBIWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRI8",
+            "Cg9TZW5kRGlhZ25vc3RpY3MSDy5SZWFkaW5nTWVzc2FnZRoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSgBEiwKC0NyZWF0ZVRva2VuEg0uVG9rZW5SZXF1ZXN0",
+            "Gg4uVG9rZW5SZXNwb25zZUIaqgIXTWV0ZXJSZWFkZXJXZWIuU2VydmljZXNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MeterReaderWeb.Services.EnumsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MeterReaderWeb.Services.TokenRequest), global::MeterReaderWeb.Services.TokenRequest.Parser, new[]{ "Username", "Password" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MeterReaderWeb.Services.TokenResponse), global::MeterReaderWeb.Services.TokenResponse.Parser, new[]{ "Token", "Expiration", "Success" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MeterReaderWeb.Services.ReadingPacket), global::MeterReaderWeb.Services.ReadingPacket.Parser, new[]{ "Readings", "Notes", "Successful" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MeterReaderWeb.Services.ReadingMessage), global::MeterReaderWeb.Services.ReadingMessage.Parser, new[]{ "CustomerId", "ReadingValue", "ReadingTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MeterReaderWeb.Services.StatusMessage), global::MeterReaderWeb.Services.StatusMessage.Parser, new[]{ "Message", "Success" }, null, null, null)
@@ -50,6 +57,354 @@ namespace MeterReaderWeb.Services {
 
   }
   #region Messages
+  public sealed partial class TokenRequest : pb::IMessage<TokenRequest> {
+    private static readonly pb::MessageParser<TokenRequest> _parser = new pb::MessageParser<TokenRequest>(() => new TokenRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TokenRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenRequest(TokenRequest other) : this() {
+      username_ = other.username_;
+      password_ = other.password_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenRequest Clone() {
+      return new TokenRequest(this);
+    }
+
+    /// <summary>Field number for the "username" field.</summary>
+    public const int UsernameFieldNumber = 1;
+    private string username_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "password" field.</summary>
+    public const int PasswordFieldNumber = 2;
+    private string password_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Password {
+      get { return password_; }
+      set {
+        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TokenRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TokenRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Username != other.Username) return false;
+      if (Password != other.Password) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Username.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Username);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Password);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      }
+      if (Password.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TokenRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Username.Length != 0) {
+        Username = other.Username;
+      }
+      if (other.Password.Length != 0) {
+        Password = other.Password;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Username = input.ReadString();
+            break;
+          }
+          case 18: {
+            Password = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TokenResponse : pb::IMessage<TokenResponse> {
+    private static readonly pb::MessageParser<TokenResponse> _parser = new pb::MessageParser<TokenResponse>(() => new TokenResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TokenResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenResponse(TokenResponse other) : this() {
+      token_ = other.token_;
+      expiration_ = other.expiration_ != null ? other.expiration_.Clone() : null;
+      success_ = other.success_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TokenResponse Clone() {
+      return new TokenResponse(this);
+    }
+
+    /// <summary>Field number for the "token" field.</summary>
+    public const int TokenFieldNumber = 1;
+    private string token_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Token {
+      get { return token_; }
+      set {
+        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "expiration" field.</summary>
+    public const int ExpirationFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expiration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Expiration {
+      get { return expiration_; }
+      set {
+        expiration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 3;
+    private bool success_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Success {
+      get { return success_; }
+      set {
+        success_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TokenResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TokenResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Token != other.Token) return false;
+      if (!object.Equals(Expiration, other.Expiration)) return false;
+      if (Success != other.Success) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Token.Length != 0) hash ^= Token.GetHashCode();
+      if (expiration_ != null) hash ^= Expiration.GetHashCode();
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Token.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Token);
+      }
+      if (expiration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Expiration);
+      }
+      if (Success != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Success);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Token.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
+      }
+      if (expiration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Expiration);
+      }
+      if (Success != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TokenResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Token.Length != 0) {
+        Token = other.Token;
+      }
+      if (other.expiration_ != null) {
+        if (expiration_ == null) {
+          Expiration = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Expiration.MergeFrom(other.Expiration);
+      }
+      if (other.Success != false) {
+        Success = other.Success;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Token = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (expiration_ == null) {
+              Expiration = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Expiration);
+            break;
+          }
+          case 24: {
+            Success = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ReadingPacket : pb::IMessage<ReadingPacket> {
     private static readonly pb::MessageParser<ReadingPacket> _parser = new pb::MessageParser<ReadingPacket>(() => new ReadingPacket());
     private pb::UnknownFieldSet _unknownFields;
@@ -58,7 +413,7 @@ namespace MeterReaderWeb.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -235,7 +590,7 @@ namespace MeterReaderWeb.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -426,7 +781,7 @@ namespace MeterReaderWeb.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[2]; }
+      get { return global::MeterReaderWeb.Services.MeterReaderReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

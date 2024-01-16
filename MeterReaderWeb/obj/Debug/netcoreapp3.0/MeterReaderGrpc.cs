@@ -16,6 +16,8 @@ namespace MeterReaderWeb.Services {
     static readonly grpc::Marshaller<global::MeterReaderWeb.Services.StatusMessage> __Marshaller_StatusMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::MeterReaderWeb.Services.StatusMessage.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::MeterReaderWeb.Services.ReadingMessage> __Marshaller_ReadingMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::MeterReaderWeb.Services.ReadingMessage.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::MeterReaderWeb.Services.TokenRequest> __Marshaller_TokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::MeterReaderWeb.Services.TokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::MeterReaderWeb.Services.TokenResponse> __Marshaller_TokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::MeterReaderWeb.Services.TokenResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::MeterReaderWeb.Services.ReadingPacket, global::MeterReaderWeb.Services.StatusMessage> __Method_AddReading = new grpc::Method<global::MeterReaderWeb.Services.ReadingPacket, global::MeterReaderWeb.Services.StatusMessage>(
         grpc::MethodType.Unary,
@@ -37,6 +39,13 @@ namespace MeterReaderWeb.Services {
         "SendDiagnostics",
         __Marshaller_ReadingMessage,
         __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::MeterReaderWeb.Services.TokenRequest, global::MeterReaderWeb.Services.TokenResponse> __Method_CreateToken = new grpc::Method<global::MeterReaderWeb.Services.TokenRequest, global::MeterReaderWeb.Services.TokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateToken",
+        __Marshaller_TokenRequest,
+        __Marshaller_TokenResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -63,6 +72,11 @@ namespace MeterReaderWeb.Services {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task<global::MeterReaderWeb.Services.TokenResponse> CreateToken(global::MeterReaderWeb.Services.TokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -72,7 +86,8 @@ namespace MeterReaderWeb.Services {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_AddReading, serviceImpl.AddReading)
           .AddMethod(__Method_Test, serviceImpl.Test)
-          .AddMethod(__Method_SendDiagnostics, serviceImpl.SendDiagnostics).Build();
+          .AddMethod(__Method_SendDiagnostics, serviceImpl.SendDiagnostics)
+          .AddMethod(__Method_CreateToken, serviceImpl.CreateToken).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -84,6 +99,7 @@ namespace MeterReaderWeb.Services {
       serviceBinder.AddMethod(__Method_AddReading, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MeterReaderWeb.Services.ReadingPacket, global::MeterReaderWeb.Services.StatusMessage>(serviceImpl.AddReading));
       serviceBinder.AddMethod(__Method_Test, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Test));
       serviceBinder.AddMethod(__Method_SendDiagnostics, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::MeterReaderWeb.Services.ReadingMessage, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.SendDiagnostics));
+      serviceBinder.AddMethod(__Method_CreateToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MeterReaderWeb.Services.TokenRequest, global::MeterReaderWeb.Services.TokenResponse>(serviceImpl.CreateToken));
     }
 
   }

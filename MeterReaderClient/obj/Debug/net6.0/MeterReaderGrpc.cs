@@ -53,6 +53,10 @@ namespace MeterReaderWeb.Services {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::MeterReaderWeb.Services.ReadingMessage> __Marshaller_ReadingMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MeterReaderWeb.Services.ReadingMessage.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::MeterReaderWeb.Services.TokenRequest> __Marshaller_TokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MeterReaderWeb.Services.TokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::MeterReaderWeb.Services.TokenResponse> __Marshaller_TokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MeterReaderWeb.Services.TokenResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::MeterReaderWeb.Services.ReadingPacket, global::MeterReaderWeb.Services.StatusMessage> __Method_AddReading = new grpc::Method<global::MeterReaderWeb.Services.ReadingPacket, global::MeterReaderWeb.Services.StatusMessage>(
@@ -77,6 +81,14 @@ namespace MeterReaderWeb.Services {
         "SendDiagnostics",
         __Marshaller_ReadingMessage,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::MeterReaderWeb.Services.TokenRequest, global::MeterReaderWeb.Services.TokenResponse> __Method_CreateToken = new grpc::Method<global::MeterReaderWeb.Services.TokenRequest, global::MeterReaderWeb.Services.TokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateToken",
+        __Marshaller_TokenRequest,
+        __Marshaller_TokenResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -160,6 +172,26 @@ namespace MeterReaderWeb.Services {
       public virtual grpc::AsyncClientStreamingCall<global::MeterReaderWeb.Services.ReadingMessage, global::Google.Protobuf.WellKnownTypes.Empty> SendDiagnostics(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_SendDiagnostics, null, options);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::MeterReaderWeb.Services.TokenResponse CreateToken(global::MeterReaderWeb.Services.TokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::MeterReaderWeb.Services.TokenResponse CreateToken(global::MeterReaderWeb.Services.TokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateToken, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::MeterReaderWeb.Services.TokenResponse> CreateTokenAsync(global::MeterReaderWeb.Services.TokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::MeterReaderWeb.Services.TokenResponse> CreateTokenAsync(global::MeterReaderWeb.Services.TokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateToken, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
