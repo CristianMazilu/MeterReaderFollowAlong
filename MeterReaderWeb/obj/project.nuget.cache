@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oM0523HcpeLnW8yasNWae5eESiAvBHp/ZwJMMu4iQVUYVCZZfVA/Pde5J57B2j/v4zqVszp3D22Bm3LfEZVyHg==",
+  "dgSpecHash": "BzRwmFBoeppBDtwPG7q/2xJ8ZxuNxOY10nT8Ng2EXSzABG7lSpWXnHbXM5rW8m9VD0s/gkTyYYn7RLl70fjjgw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\2024.01.06 gRPC Course\\MeterReader\\src\\MeterReader\\MeterReaderWeb\\MeterReaderWeb.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\mazil\\.nuget\\packages\\grpc.net.clientfactory\\2.23.2\\grpc.net.clientfactory.2.23.2.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\grpc.net.common\\2.23.2\\grpc.net.common.2.23.2.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\grpc.tools\\2.23.0\\grpc.tools.2.23.0.nupkg.sha512",
+    "C:\\Users\\mazil\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\3.0.0\\microsoft.aspnetcore.authentication.certificate.3.0.0.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "C:\\Users\\mazil\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.0.0\\microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",

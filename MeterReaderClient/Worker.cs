@@ -5,6 +5,7 @@ using Grpc.Net.Client;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MeterReaderClient
 {
@@ -35,8 +36,15 @@ namespace MeterReaderClient
             {
                 if (_client == null)
                 {
+                    var cert = new X509Certificate2(_config["Service:CertFileName"], _config["Service:CertPassword"]);
+                    var handler = new HttpClientHandler();
+                    handler.ClientCertificates.Add(cert);
+                    
+                    var client = new HttpClient(handler);
+
                     var opt = new GrpcChannelOptions()
                     {
+                        HttpClient = client,
                         LoggerFactory = loggerFactory,
                     };
 
@@ -90,12 +98,12 @@ namespace MeterReaderClient
 
                 try
                 {
-                    if (!NeedsLogin() || await GenerateToken())
+                    /*if (!NeedsLogin() || await GenerateToken())
                     {
                         var headers = new Metadata();
-                        headers.Add("Authorization", $"Bearer {token}");
+                        headers.Add("Authorization", $"Bearer {token}");*/
 
-                        var result = await Client.AddReadingAsync(pkt, headers: headers);
+                        var result = await Client.AddReadingAsync(pkt); //, headers: headers);
                         if (result.Success == ReadingStatus.Success)
                         {
                             _logger.LogInformation("Successfully sent");
@@ -104,7 +112,7 @@ namespace MeterReaderClient
                         {
                             _logger.LogInformation("Failed to send");
                         }
-                    }
+                    //}
                 }
                 catch (RpcException ex)
                 {

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using MeterReaderLib;
 using MeterReaderWeb.Data;
 using MeterReaderWeb.Services;
+using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +35,19 @@ namespace MeterReaderWeb
               .AddJwtBearer(cfg =>
               {
                   cfg.TokenValidationParameters = new MeterReaderTokenValidationParameters(_config);
+              })
+              .AddCertificate(opt =>
+              {
+                  opt.AllowedCertificateTypes = CertificateTypes.SelfSigned;
+                  opt.RevocationMode = X509RevocationMode.NoCheck; // Just for development
+                  opt.Events = new CertificateAuthenticationEvents
+                  {
+                      OnCertificateValidated = ctx =>
+                      {
+                          ctx.Success();
+                          return Task.CompletedTask;
+                      }
+                  };
               });
 
             services.AddDbContext<ReadingContext>(options =>

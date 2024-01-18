@@ -102,3 +102,4 @@ D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderWeb\bi
 D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderWeb\bin\Debug\netcoreapp3.0\Grpc.Net.ClientFactory.dll
 D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderWeb\bin\Debug\netcoreapp3.0\Grpc.Net.Common.dll
 D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderWeb\bin\Debug\netcoreapp3.0\meterwebcert.pfx
+D:\Projects\2024.01.06 gRPC Course\MeterReader\src\MeterReader\MeterReaderWeb\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.Certificate.dll

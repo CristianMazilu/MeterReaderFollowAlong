@@ -25,4 +25,10 @@
       <Link>Protos\MeterReader.proto</Link>
     </Protobuf>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="meterselfcert.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

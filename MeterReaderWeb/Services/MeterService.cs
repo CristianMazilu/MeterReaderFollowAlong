@@ -4,6 +4,7 @@ using MeterReaderLib;
 using MeterReaderLib.Models;
 using MeterReaderWeb.Data;
 using MeterReaderWeb.Data.Entities;
+using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace MeterReaderWeb.Services
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = CertificateAuthenticationDefaults.AuthenticationScheme)]
     public class MeterService : MeterReadingService.MeterReadingServiceBase
     {
         private readonly ILogger<MeterService> _logger;

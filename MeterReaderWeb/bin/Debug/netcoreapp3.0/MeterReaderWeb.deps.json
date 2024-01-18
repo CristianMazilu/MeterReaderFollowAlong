@@ -32,6 +32,7 @@
         "dependencies": {
           "Grpc.AspNetCore": "2.23.2",
           "MeterReaderLib": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.Certificate": "3.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.0.0",
           "Microsoft.AspNetCore.Identity.UI": "3.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.0.0",
@@ -431,6 +432,17 @@
         }
       },
       "Grpc.Tools/2.23.0": {},
+      "Microsoft.AspNetCore.Authentication.Certificate/3.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.19.46502"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/3.0.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
@@ -3234,6 +3246,13 @@
       "sha512": "sha512-nddxpcbrypxzP2ZHY50FuiTBVMdDPnZ6AtsrOn4JXOVLtwCg8UVynOFr1yBkCj9Ki5lTsfK1toc8glhO3OriVg==",
       "path": "grpc.tools/2.23.0",
       "hashPath": "grpc.tools.2.23.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2GmxqnltumbRgAiZXsOgWN+PUYbaOcy3JZWo831Ti9VfiS9/xQlgiRJVJVVdGJ8/VKGVkxzFKBc2rIdIfQstPg==",
+      "path": "microsoft.aspnetcore.authentication.certificate/3.0.0",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.3.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.0.0": {
       "type": "package",
