@@ -39,8 +39,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\enums.proto" GrpcServices="None" ProtoRoot="Protos\"/>
-    <Protobuf Include="Protos\MeterReader.proto" GrpcServices="Server" ProtoRoot="Protos\"/>
+    <Protobuf Include="Protos\enums.proto" GrpcServices="None" ProtoRoot="Protos\" />
+    <Protobuf Include="Protos\MeterReader.proto" GrpcServices="Server" ProtoRoot="Protos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="meterwebcert.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

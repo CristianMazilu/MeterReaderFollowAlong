@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeterReaderWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92dcd6dc6f747d64065de8e94c6aebbb8379cd80")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f7a115197a0890a4336b07c174267e9094a6aa7")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeterReaderWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeterReaderWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
